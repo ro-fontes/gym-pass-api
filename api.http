@@ -1,0 +1,18 @@
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "name": "Rodrigo Fontes",
+  "email": "rodrigo@gmail.com",
+  "password": "123123123"
+}
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "rodrigo@gmail.com",
+  "password": "123123123"
+}
