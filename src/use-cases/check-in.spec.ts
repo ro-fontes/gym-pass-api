@@ -1,12 +1,12 @@
+import { Prisma } from "@prisma/client";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { Decimal } from "@prisma/client/runtime/library";
 
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository";
 import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository";
 
 import { CheckInUseCase } from "@/use-cases/check-in";
-import { MaxNumberOfCheckInsError } from "@/use-cases/errors/max-number-of-check-ins.error";
 import { MaxDistanceError } from "@/use-cases/errors/max-distance.error";
+import { MaxNumberOfCheckInsError } from "@/use-cases/errors/max-number-of-check-ins.error";
 
 let checkInsRepository: InMemoryCheckInsRepository;
 let gymsRepository: InMemoryGymsRepository;
@@ -93,8 +93,8 @@ describe("Check-in Use Case", () => {
       title: "TypeScript Gym",
       description: "",
       phone: "",
-      latitude: new Decimal(-23.945678),
-      longitude: new Decimal(-46.945678)
+      latitude: new Prisma.Decimal(-23.945678),
+      longitude: new Prisma.Decimal(-46.945678)
     });
 
     await expect(() =>

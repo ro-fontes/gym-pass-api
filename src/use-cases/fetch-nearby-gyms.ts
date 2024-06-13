@@ -1,5 +1,6 @@
-import { GymsRepository } from "@/repositories/gyms-repository";
 import { Gym } from "@prisma/client";
+
+import { GymsRepository } from "@/repositories/gyms-repository";
 
 interface UseCaseRequest {
   userLatitude: number;

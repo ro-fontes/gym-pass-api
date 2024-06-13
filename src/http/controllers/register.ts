@@ -1,8 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
 
-import { PrismaUserRepository } from "@/repositories/prisma/prisma-users-repository";
-import { RegisterUserCase } from "@/use-cases/register";
 import { UserAlreadyExistsError } from "@/use-cases/errors/user-already-exists.error";
 import { makeRegisterUseCase } from "@/use-cases/factories/make-register-use-case";
 

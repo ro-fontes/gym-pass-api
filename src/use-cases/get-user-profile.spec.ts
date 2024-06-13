@@ -1,12 +1,10 @@
-import { beforeEach, describe, expect, it } from "vitest";
 import { hash } from "bcryptjs";
+import { beforeEach, describe, expect, it } from "vitest";
 
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 
-import { AuthenticateUseCase } from "@/use-cases/authenticate";
-import { InvalidCredentialsError } from "@/use-cases/errors/invalid-credentials.error";
-import { GetUserProfileUseCase } from "@/use-cases/get-user-profile";
 import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found.error";
+import { GetUserProfileUseCase } from "@/use-cases/get-user-profile";
 
 let usersRepository: InMemoryUsersRepository;
 let sut: GetUserProfileUseCase;

@@ -4,10 +4,10 @@ import { CheckInsRepository } from "@/repositories/check-ins-repository";
 import { GymsRepository } from "@/repositories/gyms-repository";
 
 import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found.error";
-
-import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
 import { MaxDistanceError } from "@/use-cases/errors/max-distance.error";
 import { MaxNumberOfCheckInsError } from "@/use-cases/errors/max-number-of-check-ins.error";
+
+import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
 
 interface UseCaseRequest {
   userId: string;
