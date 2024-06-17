@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cookie": "9.3.1",
     "@fastify/jwt": "8.0.1",
     "@prisma/client": "5.15.0",
     "dayjs": "1.11.11",
