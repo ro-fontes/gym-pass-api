@@ -14,7 +14,7 @@ jobs:
         env:
           POSTGRESQL_USERNAME: docker
           POSTGRESQL_PASSWORD: docker
-          POSTGRESQL_DATABASE: ignitenode03
+          POSTGRESQL_DATABASE: apisolid
 
     steps:
       - uses: actions/checkout@v4
@@ -27,12 +27,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
           cache: "pnpm"
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
       - run: pnpm install
       - run: pnpm i prisma -g
       - run: pnpm prisma generate
+
+      - run: pnpm link ./prisma/vitest-environment-prisma
 
       - run: pnpm test:e2e
         env:
