@@ -19,6 +19,6 @@ jobs:
           node-version: 20
           cache: "pnpm"
 
-      - run: pnpm ci --frozen-lockfile
+      - run: pnpm ci
 
       - run: pnpm test
