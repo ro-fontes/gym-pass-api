@@ -34,6 +34,8 @@ jobs:
       - run: pnpm i prisma -g
       - run: pnpm prisma generate
 
+      - run: pnpm link ./prisma/vitest-environment-prisma
+
       - run: pnpm test:e2e
         env:
           JWT_SECRET: testing
