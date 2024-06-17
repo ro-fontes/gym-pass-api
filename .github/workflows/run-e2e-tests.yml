@@ -27,8 +27,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
           cache: "pnpm"
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
       - run: pnpm install
       - run: pnpm i prisma -g
