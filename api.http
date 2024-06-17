@@ -16,3 +16,9 @@ Content-Type: application/json
   "email": "rodrigo@gmail.com",
   "password": "123123123"
 }
+
+###
+
+GET http://localhost:3333/me
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwYmU4ZTRiYS0zMGYzLTRkODAtOGE0NC1iMjQwYzUyZDFiNWEiLCJpYXQiOjE3MTg2MjgxMDV9.RoHfZihxbzaNF_wq-YnVEUBqFQD7jE7WmxxKtlomdNE
